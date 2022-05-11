@@ -25,6 +25,7 @@ body {
 }
 
 button{
+  margin-top:10px;
   cursor: pointer;
   outline: none;
   width: 200px;
@@ -51,6 +52,25 @@ button:disabled{
   cursor: default;
   filter: brightness(30%)
 }
+
+.joke{
+  width:400px;
+  padding:20px;
+  /* display:none; */
+  color: white;
+  font-family: 'Courier New', Courier, monospace;
+  background-color: rgba(255, 52, 130, 0.5);
+  backdrop-filter: blur(20px) saturate(100%);
+  box-shadow: 2px 2px 20px 10px rgba(0,0,0,0.2);
+  font-weight: bold;
+  border-radius:10px;
+}
+
+.hidden{
+  display:none;
+}
+
+
 
 
 /* media query: tablet or smaller */
