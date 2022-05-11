@@ -34,7 +34,6 @@ async function getJokes(){
     // calling the function that will call the api
     readJokes(joke)
 }
-
  // read jokes 
 function readJokes(joke){
     VoiceRSS.speech({
@@ -59,9 +58,14 @@ buttonText.addEventListener('click', ()=>{
         jokeText.classList.remove('hidden')
         buttonText.innerHTML = 'Hide Text'
         showingText = true
+        console.log('mostrando');
     }else{
         jokeText.classList.add('hidden')
         buttonText.innerHTML = 'Show Text'
         showingText = false
+        console.log('escondendo');
     }
 })
+
+
+
