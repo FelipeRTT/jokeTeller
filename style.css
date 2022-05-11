@@ -48,9 +48,10 @@ button:active{
   transform: scale(0.98)
 }
 
+/* making the button disabled when is already runing one audio joke*/
 button:disabled{
-  cursor: default;
-  filter: brightness(30%)
+  cursor: not-allowed;
+  filter: brightness(70%)
 }
 
 .joke{
@@ -88,5 +89,7 @@ button:disabled{
 
     .joke{
       width: 280px;
+      font-size: 23px;
     }
 }
+
