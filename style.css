@@ -64,6 +64,7 @@ button:disabled{
   box-shadow: 2px 2px 20px 10px rgba(0,0,0,0.2);
   font-weight: bold;
   border-radius:10px;
+  font-size: 18px;
 }
 
 .hidden{
@@ -83,5 +84,9 @@ button:disabled{
 
     button{
       box-shadow: 5px 5px 30px 20px rgba(0, 0, 0, 0.5);
+    }
+
+    .joke{
+      width: 280px;
     }
 }
