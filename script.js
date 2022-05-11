@@ -9,6 +9,7 @@ const jokeText = document.getElementById('jokeText')
 
 // get the jokes from joke api 
 async function getJokes(){
+    // https://sv443.net/jokeapi/v2/
     const apiUrl = 'https://v2.jokeapi.dev/joke/Programming'
     let joke = ''
     try{
