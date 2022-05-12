@@ -40,7 +40,6 @@ async function getJokes(){
         if(data.joke === undefined){
             joke = `${data.setup} ... ${data.delivery}`
             jokeTextSpan.innerHTML = `${joke} `
-            console.log(joke);
             // adding a display again to twitter button when generate a joke
             twitter.style.display = ''
         }
@@ -48,7 +47,6 @@ async function getJokes(){
         else{
             joke = data.joke
             jokeTextSpan.innerHTML = `${joke} `
-            console.log(joke);
             // adding a display again to twitter button when generate a joke
             twitter.style.display = ''
         }
@@ -86,12 +84,10 @@ buttonText.addEventListener('click', ()=>{
         jokeText.classList.remove('hidden')
         buttonText.innerHTML = 'Hide Text'
         showingText = true
-        console.log('mostrando');
     }else{
         jokeText.classList.add('hidden')
         buttonText.innerHTML = 'Show Text'
         showingText = false
-        console.log('escondendo');
     }
 })
 
