@@ -4,20 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Joke Teller</title>
-    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="icon" type="image/png" href="robot-icon.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css"/>
     <link rel="stylesheet" href="style.css">
+    <!-- adding animations -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
     <div class="container">
-        <button id="button">Tell Me A Joke</button>
-        <button id="buttonText">Show Text</button>
-            <div class="types">
-                <input class="typeJ" type="checkbox" value="any" id="any">Any
+        <button id="button" data-aos="flip-up" data-aos-delay="600">Tell Me A Joke</button>
+        <button id="buttonText" data-aos="flip-down" data-aos-delay="900">Show Text</button>
+            <div class="types " data-aos="zoom-in" data-aos-delay="1100">
+                <input class="typeJ" type="checkbox" value="any" id="any" >Any
                 <input class="typeJ" type="checkbox" value="Programming" id="programming" checked>Programming
             </div>
             
-        <div class="jokeContent">
+        <div class="jokeContent" >
             <p class="joke hidden" id="jokeText"><span id="jokeTextSpan">Click In: Tell Me A Joke. </span> <i id="twitter" class="fab fa-twitter"></i></p> 
         </div>
         
@@ -27,5 +29,18 @@
     <script src="voiceAPI.js"></script>
     <!-- Script -->
     <script src="script.js"></script>
+    <!-- adding animations -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+        // starting the animation
+        AOS.init({
+            delay: 200, // values from 0 to 3000, with step 50ms
+            duration: 1500, // values from 0 to 3000, with step 50ms
+            once: false, // whether animation should happen only once - while scrolling down
+            mirror: false, // whether elements should animate out while scrolling past them
+            anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
+        })
+    </script>
 </body>
 </html>
