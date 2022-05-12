@@ -66,12 +66,47 @@ button:disabled{
   font-weight: bold;
   border-radius:10px;
   font-size: 19px;
+  display:flex;
 }
 
 .hidden{
   display:none;
 }
 
+.types{
+  /* background-color:red; */
+  height:20px;
+  color: white;
+  font-size:19px;
+  font-family: 'Courier New', Courier, monospace;
+  border-bottom: 3px dashed #ff3482;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.fa-twitter{
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: #1DA1F2;
+  height:30px;
+  width:30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: flex-end;
+  justify-self: flex-end;
+  cursor: pointer;
+  padding:5px 10px;
+  border-radius:7px;
+}
+
+.fa-twitter:active{
+  transform: scale(85%)
+}
+
+.fa-twitter:hover{
+  filter: brightness(115%);
+}
 
 
 

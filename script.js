@@ -4,13 +4,24 @@ const buttonText =document.getElementById('buttonText')
 const button = document.getElementById('button')
 const audioElement = document.getElementById('audio')
 const jokeText = document.getElementById('jokeText')
+const jokeTextSpan = document.getElementById('jokeTextSpan')
+
+// inputs programing and any 
+const any = document.getElementById('any')
+const programing = document.getElementById('programing')
+const noSensitive = document.getElementById('noSensitive')
+
 
 // the speek api is in voiceAPI.js
 
 // get the jokes from joke api 
 async function getJokes(){
     // https://sv443.net/jokeapi/v2/
-    const apiUrl = 'https://v2.jokeapi.dev/joke/Programming'
+    let apiUrl = 'https://v2.jokeapi.dev/joke/Programming'
+    if(any.checked){
+        apiUrl = 'https://v2.jokeapi.dev/joke/Any';
+    }
+    
     let joke = ''
     try{
         const response = await fetch(apiUrl)
@@ -18,13 +29,13 @@ async function getJokes(){
         // if the joke have two parts
         if(data.joke === undefined){
             joke = `${data.setup} ... ${data.delivery}`
-            jokeText.innerHTML = joke
+            jokeTextSpan.innerHTML = `${joke} `
             console.log(joke);
         }
         // if its a normal joke
         else{
             joke = data.joke
-            jokeText.innerHTML = joke
+            jokeTextSpan.innerHTML = `${joke} `
             console.log(joke);
         }
     }catch(err){
@@ -35,6 +46,9 @@ async function getJokes(){
     readJokes(joke)
     // disabling the button until audio ends 
     toggleButton()
+    // tweeting the joke 
+
+
 }
  // read jokes 
 function readJokes(joke){
@@ -48,8 +62,6 @@ function readJokes(joke){
         ssml:false,
     })
 }
-
-
 
 
 button.addEventListener('click', getJokes)
@@ -79,3 +91,11 @@ function toggleButton(){
 }
 
 
+
+const twitter = document.getElementById('twitter')
+twitter.addEventListener('click', twittar )
+
+function twittar(){
+    const twitterUrl = `https://twitter.com/intent/tweet?text=${jokeText.textContent}`
+    window.open(twitterUrl , '_blank')
+}

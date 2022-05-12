@@ -5,14 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Joke Teller</title>
     <link rel="icon" type="image/png" href="favicon.png">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css"/>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
         <button id="button">Tell Me A Joke</button>
         <button id="buttonText">Show Text</button>
-        <p class="joke hidden" id="jokeText">Click In: Tell Me A Joke</p>
+            <div class="types">
+                <input class="typeJ" type="checkbox" value="any" id="any">Any
+                <input class="typeJ" type="checkbox" value="Programming" id="programming" checked>Programming
+            </div>
+            
+        <div class="jokeContent">
+            <p class="joke hidden" id="jokeText"><span id="jokeTextSpan">Click In: Tell Me A Joke </span> <i id="twitter" class="fab fa-twitter"></i></p> 
+        </div>
+        
         <audio id="audio"></audio>
     </div>
     <!-- script api voice -->
