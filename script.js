@@ -12,6 +12,9 @@ const programing = document.getElementById('programing')
 const noSensitive = document.getElementById('noSensitive')
 const twitter = document.getElementById('twitter')
 
+// the github pages site 
+const githubPages = 'https://felipertt.github.io/jokeTeller/'
+
 
 // removing the tweet icon if the text is the default
 
@@ -108,6 +111,6 @@ function toggleButton(){
 twitter.addEventListener('click', twittar )
 
 function twittar(){
-    const twitterUrl = `https://twitter.com/intent/tweet?text=${jokeText.textContent}`
+    const twitterUrl = `https://twitter.com/intent/tweet?text=${jokeText.textContent} -- Joke from: ${githubPages}`
     window.open(twitterUrl , '_blank')
 }
