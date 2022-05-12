@@ -98,7 +98,10 @@ button:disabled{
   cursor: pointer;
   padding:5px 10px;
   border-radius:7px;
+  margin-left: 10px;
 }
+
+
 
 .fa-twitter:active{
   transform: scale(85%)

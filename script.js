@@ -10,7 +10,14 @@ const jokeTextSpan = document.getElementById('jokeTextSpan')
 const any = document.getElementById('any')
 const programing = document.getElementById('programing')
 const noSensitive = document.getElementById('noSensitive')
+const twitter = document.getElementById('twitter')
 
+
+// removing the tweet icon if the text is the default
+
+if(jokeTextSpan.textContent == 'Click In: Tell Me A Joke. '){
+    twitter.style.display = 'none'
+}
 
 // the speek api is in voiceAPI.js
 
@@ -31,12 +38,16 @@ async function getJokes(){
             joke = `${data.setup} ... ${data.delivery}`
             jokeTextSpan.innerHTML = `${joke} `
             console.log(joke);
+            // adding a display again to twitter button when generate a joke
+            twitter.style.display = ''
         }
         // if its a normal joke
         else{
             joke = data.joke
             jokeTextSpan.innerHTML = `${joke} `
             console.log(joke);
+            // adding a display again to twitter button when generate a joke
+            twitter.style.display = ''
         }
     }catch(err){
         // catch errors
@@ -92,7 +103,7 @@ function toggleButton(){
 
 
 
-const twitter = document.getElementById('twitter')
+
 twitter.addEventListener('click', twittar )
 
 function twittar(){
