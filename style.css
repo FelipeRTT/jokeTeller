@@ -79,9 +79,10 @@ button:disabled{
   color: white;
   font-size:19px;
   font-family: 'Courier New', Courier, monospace;
-  border-bottom: 3px dashed #ff3482;
+  border: 2px dashed #ff3482;
   font-weight: bold;
   margin-top: 10px;
+  padding: 4px;
 }
 
 .fa-twitter{
