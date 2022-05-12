@@ -7,4 +7,3 @@
 <h3>If you wanna test go to: <a href="https://felipertt.github.io/jokeTeller/">https://felipertt.github.io/jokeTeller/</a><h3>
 
 <img height:680px src="mobile.png" alt="Mobile Version">
-    <!-- <img style="height:400px" src="pc.png" alt="Desktop Version"> -->
