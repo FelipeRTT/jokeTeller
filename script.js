@@ -96,6 +96,7 @@ buttonText.addEventListener('click', ()=>{
 /* disabling the tell me a joke until the current joke ends */
 audioElement.addEventListener('ended', toggleButton)
 
+
 // The button gets enabled and disabled every time the function gets called.
 function toggleButton(){
     button.disabled = !button.disabled

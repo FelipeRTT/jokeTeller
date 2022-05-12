@@ -79,7 +79,7 @@ button:disabled{
   color: white;
   font-size:19px;
   font-family: 'Courier New', Courier, monospace;
-  border: 2px dashed #ff3482;
+  border: 1px dashed #ff3482;
   font-weight: bold;
   margin-top: 10px;
   padding: 4px;
@@ -114,6 +114,36 @@ button:disabled{
 
 
 
+
+/* my social medias */
+.myGithub{
+  width: 50px;
+  height: 50px;
+  background-image: url('https://cdn-icons-png.flaticon.com/512/25/25231.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: fixed;
+  right: 50px;
+  top: 50px;
+  border-radius: 50%;
+  z-index: 10;
+}
+
+.myTwitter{
+  width: 50px;
+  height: 50px;
+  background-image: url('https://cdn-icons-png.flaticon.com/512/1384/1384033.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: fixed;
+  right: 50px;
+  top: 110px;
+  border-radius: 50%;
+  z-index: 10;
+}
+
+
+
 /* media query: tablet or smaller */
 
 @media screen and (max-width: 1000px){
@@ -129,6 +159,12 @@ button:disabled{
     .joke{
       width: 280px;
       font-size: 23px;
+    }
+
+    .myGithub, .myTwitter{
+      width:35px;
+      height:35px;
+      right:20px
     }
 }
 
